@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Solutions - Gerenciador de Tarefas</title>
+    
+    <!-- Fonte limpa e moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>TaskFlow Solutions</h1>
+            <p>Organize suas tarefas de forma rápida, prática e eficiente.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Cadastro de Tarefa -->
+        <section id="cadastro-tarefa" class="card">
+            <h2 class="section-title">Criar Nova Tarefa</h2>
+
+            <form id="form-adicionar-tarefa" action="/tasks" method="POST" class="form">
+                
+                <div class="form-group">
+                    <label for="titulo">Título da Tarefa</label>
+                    <input type="text" id="titulo" name="titulo" placeholder="Ex: Desenvolver API de tarefas" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="data_prevista">Data Prevista</label>
+                    <input type="date" id="data_prevista" name="data_prevista" required>
+                </div>
+
+                <button type="submit" id="btn-adicionar" class="btn btn-primary">
+                    Adicionar Tarefa
+                </button>
+
+            </form>
+        </section>
+
+        <hr class="divisor">
+
+        <!-- Lista de Tarefas -->
+        <section id="lista-tarefas-container" class="card">
+            <h2 class="section-title">Minhas Tarefas</h2>
+
+            <div class="controle-lista">
+                <label for="ordenar">Ordenar por:</label>
+                <select id="ordenar">
+                    <option value="data-asc">Data (Mais Próxima)</option>
+                    <option value="data-desc">Data (Mais Distante)</option>
+                    <option value="status">Status (Pendentes/Concluídas)</option>
+                </select>
+            </div>
+
+            <ul id="lista-tarefas" class="task-list"></ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Desenvolvido por <strong>TaskFlow Solutions</strong> — Projeto acadêmico</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

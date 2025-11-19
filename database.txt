@@ -1,0 +1,14 @@
+create database	Taskflow;
+use Taskflow;
+
+
+create table tarefas(
+id INT AUTO_INCREMENT PRIMARY KEY,
+titulo VARCHAR(100) NOT NULL,
+status ENUM('pendente', 'concluida') DEFAULT 'pendente',
+data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+data_prevista DATE NOT NULL
+
+);
+
+select * from tarefas;
