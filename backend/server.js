@@ -5,7 +5,7 @@ const path = require("path");
 
 const app = express();
 
-// Body parser
+// Body parser que analisa requisições JSON
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
