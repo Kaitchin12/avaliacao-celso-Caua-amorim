@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "Amorim#2210",
+    password: "cimatec",
     database: "taskflow"
 });
 
@@ -70,7 +70,7 @@ app.get("/tasks", (req, res) => {
 });
 
 // ===========================
-//   3. EDITAR TAREFA (FALTAVA)
+//   3. EDITAR TAREFA 
 // ===========================
 app.put("/tasks/:id", (req, res) => {
     const { id } = req.params;
